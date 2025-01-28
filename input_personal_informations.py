@@ -31,6 +31,13 @@ while True:
  user_entry = user_inputs()
  entries.append(user_entry)
 
+ with open("user_entries.txt", "a") as file:
+    file.write(f"{user_entry[0]}")
+    file.write(f"{user_entry[1]}")
+    file.write(f"{user_entry[2]}")
+    file.write(f"{user_entry[3]}")
+    file.write(f"sabi niya {user_entry[4]} daw")
+
  print (f"SO ITO PERSONAL INFORMATIONS MO HAHAHAH LAGOT KA SAKIN: ")
  print ("")
  print (f"{user_entry[0]}")
@@ -50,3 +57,4 @@ while True:
  
  if new_entry != "YES":
     break
+
