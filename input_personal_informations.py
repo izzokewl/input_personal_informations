@@ -1,4 +1,7 @@
-while True:
+entries =[]
+
+def user_inputs():
+ while True:
     try:
         nameinput = input("Enter your full name: ").title()
         if any(char.isdigit() for char in nameinput):
@@ -7,26 +10,43 @@ while True:
     except ValueError as error:
         print (error)
 
-while True:
+ while True:
     try:
         ageinput = int(input("Enter your age: "))
         break
     except ValueError:
         print ("gets kita, pero pwede bang gawin mong numbers yan...")
 
-addressinput = input("Enter your address: ").title()
+ addressinput = input("Enter your address: ").title()
 
-emailinput = input("Enter your Email address: ")
+ emailinput = input("Enter your Email address: ").lower()
 
-feelingrn = input ("What are you feeling as of the moment? ")
-print (f"ok gets kita sana malagpasan mo yan")
-print("")
+ feelingrn = input ("What are you feeling as of the moment? ")
+ print (f"ok gets kita sana malagpasan mo yan")
+ print("")
+ 
+ return (nameinput, ageinput, addressinput, emailinput, feelingrn)
 
-user_entry = (nameinput, ageinput, addressinput, emailinput, feelingrn)
-print (f"SO ITO PERSONAL INFORMATIONS MO HAHAHAH LAGOT KA SAKIN: ")
-print ("")
-print (f"{user_entry[0]}")
-print (f"{user_entry[1]}")
-print (f"{user_entry[2]}")
-print (f"{user_entry[3]}")
-print (f"sabi niya {user_entry[4]}")
+while True:
+ user_entry = user_inputs()
+ entries.append(user_entry)
+
+ print (f"SO ITO PERSONAL INFORMATIONS MO HAHAHAH LAGOT KA SAKIN: ")
+ print ("")
+ print (f"{user_entry[0]}")
+ print (f"{user_entry[1]}")
+ print (f"{user_entry[2]}")
+ print (f"{user_entry[3]}")
+ print (f"sabi niya {user_entry[4]} daw")
+ print ("")
+
+ while True:
+  new_entry = input("Do you still want to add a new entry? (YES/NO): ").upper()
+  if new_entry == "YES" or new_entry == "NO":
+    break
+  else:
+    print("baks omayus ka")
+    print("")
+ 
+ if new_entry != "YES":
+    break
