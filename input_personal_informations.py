@@ -37,11 +37,11 @@ while True:
  entries.append(user_entry)
 
  with open("user_entries.txt", "a") as file:
-    file.write(f"{user_entry[0]}")
-    file.write(f"{user_entry[1]}")
-    file.write(f"{user_entry[2]}")
-    file.write(f"{user_entry[3]}")
-    file.write(f"sabi niya {user_entry[4]} daw")
+    file.write(f"{user_entry[0]}\n")
+    file.write(f"{user_entry[1]}\n")
+    file.write(f"{user_entry[2]}\n")
+    file.write(f"{user_entry[3]}\n")
+    file.write(f"sabi niya {user_entry[4]} daw\n")
     file.write("\n")
 
  print (f"SO ITO PERSONAL INFORMATIONS MO HAHAHAH LAGOT KA SAKIN: ")
